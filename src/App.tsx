@@ -26,6 +26,7 @@ function App() {
           <Route path="/edit-product/:id" element={<EditProduct />} />
           <Route path="/dashboard*" element={<Navigate to="/dashboard" />} />
           <Route path="/*" element={<Navigate to="/dashboard" />} />
+          <Route path="*" element={<Navigate to="/dashboard" />} />
         </Routes>
       </AnimatePresence>
       <ToastContainer

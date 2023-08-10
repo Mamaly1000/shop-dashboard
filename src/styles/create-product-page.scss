@@ -1,0 +1,133 @@
+.create-product-page {
+  @apply w-full min-h-[500px] py-10 flex flex-col items-center justify-start gap-5;
+  .box {
+    @apply min-w-full min-h-[200px] max-h-fit p-2 rounded-lg drop-shadow-2xl transition-all flex flex-wrap gap-3 items-start justify-between;
+  }
+  .small-box {
+    @apply w-[350px] h-[200px] rounded-lg drop-shadow-2xl p-1 flex items-center justify-center transition-all;
+  }
+  .progress-container {
+    @apply w-[300px] h-[300px] flex items-center justify-center relative;
+    span {
+      @apply z-20 whitespace-nowrap absolute w-fit h-fit flex items-center justify-center gap-3 rounded-lg px-5 py-2 text-[1.2rem] drop-shadow-2xl;
+      img {
+        @apply absolute bottom-[-16px] right-[-16px] w-[35px] h-[35px] rounded-full bg-green-700 p-1;
+      }
+    }
+    .step-1 {
+      @apply right-[-15%];
+    }
+    .step-2 {
+      @apply bottom-0;
+    }
+    .step-3 {
+      @apply left-[-15%];
+    }
+    .step-4 {
+      @apply top-0;
+    }
+    .progress-slider {
+      @apply z-10 w-[300px] h-[300px] rotate-[-90deg] absolute;
+    }
+  }
+  .input-group {
+    background: rgba(255 255 255/0.1);
+    @apply relative flex flex-col md:flex-row items-center justify-between gap-2 w-full md:w-[48%] min-h-fit p-2 max-h-fit backdrop-blur-md rounded-lg drop-shadow-2xl;
+    .label-container {
+      @apply w-full md:w-fit flex items-center justify-start gap-2;
+      img {
+        @apply w-[25px] h-[25px];
+      }
+      label {
+        @apply whitespace-nowrap text-[1rem] capitalize;
+      }
+    }
+    input {
+      border-color: rgba(255 255 255/0.1);
+      background: rgba(0 0 0/0.1);
+      @apply px-5 shadow-sm shadow-blur w-[100%] md:w-[60%] h-[45px] rounded-lg backdrop-blur-lg border-[1px] border-transparent hover:border-white focus:border-white;
+    }
+    textarea {
+      border-color: rgba(255 255 255/0.1);
+      background: rgba(0 0 0/0.1);
+      @apply pt-2 px-5 shadow-sm shadow-blur w-[100%] md:w-[60%] h-[45px] rounded-lg backdrop-blur-lg border-[1px] border-transparent hover:border-white focus:border-white;
+    }
+    .calander {
+      background: rgba(0 0 0/0.5);
+      @apply z-[99944999] backdrop-blur-xl absolute md:top-[65px] end-[-.05%]   top-[100px] font-vazir text-white;
+      .JC-days {
+        @apply bg-transparent;
+        .day-items {
+          @apply rounded-lg;
+          &:hover {
+            background: rgba(0 0 0/0.1);
+          }
+        }
+      }
+      .monthPicker {
+        background: rgba(0 0 0/0.8);
+        @apply backdrop-blur-md;
+        .month-items {
+          @apply text-white bg-transparent;
+          &:hover {
+            background: rgba(255 255 255/0.1);
+          }
+        }
+      }
+      .JC-months {
+        .holder {
+          @apply min-w-full flex;
+        }
+      }
+    }
+    .require {
+      @apply absolute end-3 w-fit max-h-[40px] min-h-fit px-2 py-1 rounded-lg bg-red-400 capitalize font-semibold;
+    }
+  }
+  .checkbox_group {
+    background: rgba(255 255 255/0.1);
+    @apply text-[1rem] px-2 capitalize relative flex flex-col md:flex-row items-center justify-between gap-2 w-full md:w-[48%] min-h-fit p-2 max-h-fit backdrop-blur-md rounded-lg drop-shadow-2xl border-[1px] border-transparent hover:border-white cursor-pointer;
+    .circle-component {
+      @apply w-[20px] h-[20px] flex items-center justify-center rounded-full bg-transparent border-[1px] border-white;
+      .tick {
+        @apply min-w-[20px] min-h-[20px] rounded-full bg-transparent border-[5px] border-white;
+      }
+    }
+  }
+  .date-input {
+    @apply z-30;
+  }
+  .section-header {
+    @apply w-full min-h-fit text-[2rem] font-semibold capitalize flex items-center justify-between;
+    button {
+      @apply w-fit h-fit px-3 py-2 text-[1rem] drop-shadow-2xl rounded-lg hover:drop-shadow-none;
+    }
+  }
+  .steps-action-container {
+    @apply w-full flex gap-2 items-start justify-start;
+    button {
+      @apply w-fit h-fit whitespace-nowrap px-3 py-2 rounded-lg capitalize drop-shadow-2xl hover:drop-shadow-none border-[1px] border-transparent hover:border-white;
+    }
+    .reset {
+      @apply bg-gray-300 text-gray-700 hover:border-gray-700;
+    }
+  }
+  .table-component {
+    @apply min-w-full flex flex-wrap items-start justify-between gap-5;
+    .data-item {
+      @apply w-full bg-blur backdrop-blur-md md:w-[49%] min-h-[50px] max-h-fit rounded-lg flex justify-start items-center gap-2 px-3;
+      .value {
+        @apply font-bold;
+        .circle {
+          @apply  min-w-[25px] opacity-80 min-h-[25px] rounded-full;
+        }
+        .red {
+          @apply bg-red-500  ;
+        }
+        .green {
+          @apply bg-green-500 ;
+        }
+      }
+    }
+  }
+}

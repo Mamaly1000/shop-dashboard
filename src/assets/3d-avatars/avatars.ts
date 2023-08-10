@@ -1,0 +1,10 @@
+export { default as avatar1 } from "./pic-1.jpg";
+export { default as avatar2 } from "./pic-2.jpg";
+export { default as avatar3 } from "./pic-3.jpg";
+export { default as avatar4 } from "./pic-4.jpg";
+export { default as avatar5 } from "./pic-5.jpg";
+export { default as avatar6 } from "./pic-8.jpg";
+export { default as avatar7 } from "./pic-6.jpg";
+export { default as avatar8 } from "./pic-1.jpg";
+export { default as avatar9 } from "./pic-7.jpg";
+export { default as avatar10 } from "./pic-10.jpg";

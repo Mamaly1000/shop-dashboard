@@ -1,0 +1,211 @@
+{
+  "dashboard_title": "مانیتورنگ سامانه ",
+  "header": {
+    "search_placeholder": "جستوجو کنید ...",
+    "system": "سامانه آلپاین",
+    "setting": {
+      "title": "پیش نمایش تم",
+      "header": "عنوان",
+      "p": "این متن یک متن تستی می باشد و برای بررسی تم داشبورد استفاده شده است",
+      "btn": "مطالعه بیشتر"
+    }
+  },
+  "sidebar": {
+    "header": "داشبورد",
+    "links": [
+      {
+        "mainTitle": "Purchase management",
+        "persianTitle": "مدیریت خرید",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "mainTitle": "Financial Management",
+        "persianTitle": "مدیریت مالی",
+        "icon": "./../assets/icons/paper.svg"
+      },
+      {
+        "mainTitle": "wallet",
+        "persianTitle": "کیف پول",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "mainTitle": "Friends",
+        "persianTitle": "دوستان",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "mainTitle": "calculator",
+        "persianTitle": "ماشین حساب ",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "mainTitle": "Monitoring",
+        "persianTitle": "مانیتورینگ ",
+        "icon": "./../assets/icons/chat.svg"
+      }
+    ],
+    "teamMates": {
+      "title": "همکارانم",
+      "teamMates": [
+        {
+          "name": "من",
+          "desc": "توسعه دهنده front end"
+        },
+        {
+          "name": "مهران امیری",
+          "desc": "توسعه دهنده جاوا، توسعه دهنده پایتون"
+        },
+        {
+          "name": "رضا احمدی",
+          "desc": "کارشناس بازاریابی دیجیتال، طراح گرافیک"
+        },
+        {
+          "name": "فربد حقی",
+          "desc": " توسعه دهنده django"
+        },
+        {
+          "name": "علی داوودی",
+          "desc": "طراح رابط کاربری ux، توسعه دهنده front end"
+        }
+      ]
+    }
+  },
+  "monitoring": {
+    "title": "مانیتورینگ سامانه",
+    "overall_data": [
+      {
+        "title": "کاربران امروز",
+        "value": "123 کاربر"
+      },
+      {
+        "title": "صاحب میزکار",
+        "value": "علی داوودی"
+      },
+      {
+        "title": "جدیدترین رویداد",
+        "value": "2024/12/04"
+      },
+      {
+        "title": "سود امروز",
+        "value": "$2,343,233 دلار"
+      }
+    ]
+  },
+  "purchasing": {
+    "title": "مدیریت خرید",
+    "addbtn": "ثبت خرید جدید",
+    "table": {
+      "search": {
+        "title": "جستوجو",
+        "placeholder": "جستوجو کنید ..."
+      },
+      "refresh": "فیلترها ریست شدند !",
+      "filter": {
+        "title": "اعمال فیلتر",
+        "assign_filter": "اعمال فیلتر",
+        "fast": {
+          "title": "فیلتر سریع",
+          "btns": [
+            {
+              "name": "فعال",
+              "type": "td_active"
+            },
+            {
+              "name": "تاریخ انقضا",
+              "type": "td_exdate"
+            }
+          ]
+        }
+      },
+      "heads": [
+        {
+          "name": "شناسه",
+          "type": "td_number"
+        },
+        {
+          "name": "نام محصول",
+          "type": "td_name"
+        },
+        {
+          "name": "قیمت",
+          "type": "td_price"
+        },
+        {
+          "name": "تاریخ اضافه شده",
+          "type": "td_add"
+        },
+        {
+          "name": "خریدار",
+          "type": "td_buyer"
+        },
+        {
+          "name": "دسته بندی",
+          "type": "td_category"
+        },
+        {
+          "name": "شرکت",
+          "type": "td_company"
+        },
+        {
+          "name": "توضیحات",
+          "type": "td_desc"
+        },
+        {
+          "name": "تاریخ انقضا",
+          "type": "td_exdate"
+        },
+        {
+          "name": "تعداد کل",
+          "type": "td_total"
+        },
+        {
+          "name": "فعال",
+          "type": "td_active"
+        }
+      ],
+      "pagination": {
+        "title": "صفحات",
+        "desc": "نمایش : {{offset}} تا {{endPage}} از {{productsLength}} | صفحه {{currentPage}} از {{totalPages}}"
+      }
+    }
+  },
+  "create_product_page": {
+    "header": "ایجاد محصول جدید :)",
+    "btn": "بازگشت به داشبورد"
+  },
+  "create_procuct_form": {
+    "name": "نام محصول",
+    "persian_name": "نام فارسی محصول",
+    "buyer_name": "نام خریدار",
+    "company_name": "نام شرکت",
+    "reset_btn": "بازنشانی",
+    "next_step": "مرحله بعد",
+    "back_btn": "بازگشت",
+    "category": {
+      "en": "به انگلیسی دسته بندی",
+      "fa": "دسته بندی"
+    },
+    "date": "تاریخ اضافه شده",
+    "ex_date": "تاریخ انقضا",
+    "price": "قیمت",
+    "total": "مجموع محصول",
+    "desc": {
+      "fa": "توضیحات به فارسی",
+      "en": "توضیحات محصول"
+    },
+    "active": "فعال",
+    "finalize": "اضافه کردن محصول",
+    "reqire": "الزامی"
+  },
+  "steps": ["مرحله اول", "مرحله دوم", "مرحله سوم", "تایید نهایی"],
+  "form_toasts": {
+    "number": "{{title}} باید بزرگتر از صفر باشد .",
+    "string": "فیلد {{title}} نباید خالی باشد .",
+    "date": "تاریخ اضافه شده نباید با تاریخ انقضا برابر و یا بزرگتر باشد",
+    "justnumber": "ورودی این فیلد تنها عدد می تواند باشد ."
+  },
+  "edit_product_page": {
+    "header": "ویرایش محصول :)",
+    "btn": "بازگشت به داشبورد"
+  }
+}

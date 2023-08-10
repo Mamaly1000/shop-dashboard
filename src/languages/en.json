@@ -1,0 +1,205 @@
+{
+  "dashboard_title": "System monitoring ",
+  "header": {
+    "search_placeholder": "search ...",
+    "system": "Alpine System",
+    "setting": {
+      "title": "theme preview ",
+      "header": "title",
+      "p": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, dolore vero nulla aliquam voluptas .",
+      "btn": "read more"
+    }
+  },
+  "sidebar": {
+    "header": "dashboard",
+    "links": [
+      {
+        "title": "Purchase management",
+        "icon": "../assets/icons/chat.svg"
+      },
+      {
+        "title": "Financial Management",
+        "icon": "./../assets/icons/paper.svg"
+      },
+      {
+        "title": "wallet",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "title": "Friends",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "title": "calculator",
+        "icon": "./../assets/icons/chat.svg"
+      },
+      {
+        "title": "Monitoring",
+        "icon": "./../assets/icons/chat.svg"
+      }
+    ],
+    "teamMates": {
+      "title": "My TeamMates",
+      "teamMates": [
+        {
+          "name": "Me",
+          "desc": "front end developer"
+        },
+        {
+          "name": "mehran amiri",
+          "desc": "java developer , python developer"
+        },
+        {
+          "name": "reza ahmadi",
+          "desc": "digital marketing expert , graphic designer"
+        },
+        {
+          "name": "farbod haghi",
+          "desc": "django developer"
+        },
+        {
+          "name": "ali davoodi",
+          "desc": "ui ux designer , front end developer"
+        }
+      ]
+    }
+  },
+  "monitoring": {
+    "title": "Monitoring System",
+    "overall_data": [
+      {
+        "title": "todays users",
+        "value": "123 users"
+      },
+      {
+        "title": "desk owner",
+        "value": "ali davoodi"
+      },
+      {
+        "title": "latest event",
+        "value": "2024/12/04"
+      },
+      {
+        "title": "todays profit",
+        "value": "$2,343,233 dollor"
+      }
+    ]
+  },
+  "purchasing": {
+    "title": "Purchase management",
+    "addbtn": "buy new product",
+    "table": {
+      "search": {
+        "title": "search",
+        "placeholder": "search ..."
+      },
+      "refresh": "reset filters successfully !",
+      "filter": {
+        "title": "apply filter",
+        "assign_filter": "apply filter",
+        "fast": {
+          "title": "fast filter",
+          "btns": [
+            {
+              "name": "active",
+              "type": "td_active"
+            },
+            {
+              "name": "expire date",
+              "type": "td_exdate"
+            }
+          ]
+        }
+      },
+      "heads": [
+        {
+          "name": "id",
+          "type": "td_number"
+        },
+        {
+          "name": "name",
+          "type": "td_name"
+        },
+        {
+          "name": "price",
+          "type": "td_price"
+        },
+        {
+          "name": "added date",
+          "type": "td_add"
+        },
+        {
+          "name": "buyer",
+          "type": "td_buyer"
+        },
+        {
+          "name": "category",
+          "type": "td_category"
+        },
+        {
+          "name": "company",
+          "type": "td_company"
+        },
+        {
+          "name": "description",
+          "type": "td_desc"
+        },
+        {
+          "name": "expire date",
+          "type": "td_exdate"
+        },
+        {
+          "name": "total",
+          "type": "td_total"
+        },
+        {
+          "name": "active",
+          "type": "td_active"
+        }
+      ],
+      "pagination": {
+        "title": "pages",
+        "desc": "show : {{offset}} to {{endPage}} of {{productsLength}} | page {{currentPage}} of {{totalPages}}"
+      }
+    }
+  },
+  "create_product_page": {
+    "header": "create a new product :)",
+    "btn": "return to dashboard"
+  },
+  "create_procuct_form": {
+    "name": "product name",
+    "persian_name": "persian product name",
+    "buyer_name": "buyer name",
+    "company_name": "company name",
+    "reset_btn": "reset",
+    "next_step": "next step",
+    "back_btn": "back",
+    "category": {
+      "en": "category",
+      "fa": "persian category"
+    },
+    "date": "added date",
+    "ex_date": "expire date",
+    "price": "price",
+    "total": "total supply",
+    "desc": {
+      "fa": "persian description",
+      "en": "product description"
+    },
+    "active": "active",
+    "finalize": "add product",
+    "reqire": "required"
+  },
+  "steps": ["step one", "step two", "step three", "finall acceptance"],
+  "form_toasts": {
+    "number": "{{title}} must be higher than zero .",
+    "string": "{{title}} field can not be empty .",
+    "date": "added date can not be equal or higher than expire date .",
+    "justnumber": "entry can just be number ."
+  },
+  "edit_product_page": {
+    "header": "edit product :)",
+    "btn": "بازگشت به داشبورد"
+  }
+}

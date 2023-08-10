@@ -1,0 +1,183 @@
+.layout-container {
+  @apply relative max-w-full max-h-fit text-white py-[80px] w-screen min-h-[200px] overflow-hidden;
+  .back-ground {
+    box-shadow: 0px 20px 20px rgba(33, 25, 25, 0.3);
+    @apply min-w-[200%] min-h-[500px]  fixed top-[110px] left-[-50%] -z-10 transition-all;
+  }
+  .header-container {
+    @apply z-40 w-full h-[110px] fixed top-0 left-0 drop-shadow-2xl flex flex-col justify-between items-center;
+    .top_section {
+      background: rgba(0 0 0 /0.3);
+      @apply text-white px-5 md:px-24 w-full max-h-[100px] flex justify-between items-center;
+      .left_section {
+        @apply w-fit h-full flex justify-center items-center gap-5;
+        button {
+          background: rgba(255 255 255 /0.2);
+          @apply min-w-[35px] max-w-[35px] flex items-center justify-center min-h-[35px] max-h-[35px] drop-shadow-2xl rounded-full overflow-hidden hover:scale-110 transition-all;
+          img {
+            @apply w-full h-full p-1 object-cover rounded-lg;
+          }
+        }
+      }
+      .right_section {
+        @apply font-light text-[1rem] flex whitespace-nowrap items-center gap-1;
+        span {
+          @apply p-3 h-full w-fit flex items-center justify-center gap-1;
+          img {
+            @apply w-[25px] h-[25px];
+          }
+        }
+      }
+    }
+    .bottom_section {
+      @apply w-full max-h-[100px] px-5 md:px-24 py-2 flex justify-between items-center;
+      .left_section {
+        @apply w-fit h-full flex items-center justify-center gap-2;
+        button {
+          background: rgba(0 0 0/0.2);
+          @apply flex w-[40px] h-[40px] rounded-full items-center justify-center p-2 hover:scale-110 transition-all;
+          &:hover {
+            background: rgba(0 0 0/0.9);
+          }
+          img {
+            @apply rounded-full;
+          }
+        }
+        .extra-btn {
+          @apply hidden md:flex;
+        }
+        .search-input {
+          @apply hidden md:flex relative w-[300px] min-h-[40px] items-center;
+          input {
+            background: rgba(0 0 0 /0.2);
+            @apply min-w-full min-h-full h-[40px] outline-none rounded-lg transition-all border-[1px] border-transparent focus:border-white text-white px-10;
+          }
+          img {
+            @apply w-[25px] h-[25px] absolute;
+          }
+        }
+      }
+      .right_section {
+        @apply whitespace-nowrap w-fit h-full flex justify-center items-center gap-2 text-[1.5rem] font-semibold;
+        button {
+          background: rgba(0 0 0/0.2);
+          @apply w-[40px] h-[40px] rounded-full flex items-center justify-center p-2 hover:scale-110 transition-all;
+          &:hover {
+            background: rgba(0 0 0/0.9);
+          }
+          img {
+            @apply rounded-full;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-container {
+    @apply fixed start-0   top-[110px] px-5 pt-10 pb-[300px] overflow-hidden z-50 min-w-full max-w-full md:min-w-[300px] md:max-w-[300px] h-screen min-h-[900px] max-h-fit backdrop-filter;
+    .sidebar_scroll {
+      @apply w-full h-full overflow-auto;
+      .sidebar_header {
+        @apply w-full text-[23px] capitalize font-semibold min-h-[100px] border-b-[1px] border-b-gray-300 flex whitespace-nowrap items-center justify-between gap-1;
+        img {
+          @apply w-[35px] h-[35px];
+        }
+      }
+      .sidebar-section-btns {
+        @apply w-full max-h-fit flex flex-col items-start justify-start gap-2 py-5 border-b-[1px] border-b-gray-300;
+        button {
+          @apply relative w-full min-h-[50px] rounded-lg flex items-center justify-start gap-1 px-3 py-1 transition-all;
+        }
+        button:hover {
+          @apply border-[.1px] border-gray-300 ps-5;
+        }
+        .btn-circle {
+          @apply bg-white w-[15px] h-[15px] rounded-full absolute;
+        }
+      }
+      .team-mate-container {
+        @apply w-full flex flex-col items-start justify-start gap-1 py-5;
+        .team-mate-header {
+          background: rgba(0 0 0 /0.2);
+          @apply w-full text-[1.2rem] text-white rounded-lg flex items-center justify-start gap-2;
+          img {
+            filter: invert(99%) sepia(99%) saturate(2%) hue-rotate(5deg)
+              brightness(107%) contrast(100%);
+            @apply w-[45px] h-[45px];
+          }
+        }
+        .team-mate-list {
+          @apply w-full flex flex-col items-start justify-start gap-2;
+          button {
+            @apply w-full min-h-[60px] flex items-center justify-start gap-2 p-1 rounded-lg hover:drop-shadow-2xl transition-all;
+            &:hover {
+              background: rgba(255 255 255 /0.2);
+            }
+            div {
+              @apply w-fit h-full flex flex-col items-start justify-start gap-1;
+              .team-mate-name {
+                @apply font-bold;
+              }
+              .team-mate-desc {
+                @apply flex justify-start items-start font-light text-[.8rem];
+              }
+            }
+            img {
+              @apply min-w-[50px] min-h-[50px];
+            }
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+    }
+    img {
+      @apply w-[25px] h-[25px] rounded-full;
+    }
+    .close-btn {
+      @apply w-fit h-fit drop-shadow-2xl hover:drop-shadow-none rounded-lg hover:scale-105;
+    }
+  }
+  .layout-children-container {
+    @apply w-full min-h-[500px] max-h-fit py-0 px-5 md:px-24 transition-all;
+  }
+  .children-padding {
+    @apply ps-24 md:ps-[330px] pe-24;
+  }
+  .setting-container {
+    background: rgba(255 255 255 /0.1);
+    @apply w-[300px] end-5 backdrop-blur-xl h-fit rounded-lg drop-shadow-2xl p-4 fixed top-[120px] flex items-start justify-start flex-col gap-2;
+    .setting-title {
+      @apply w-full text-[1.2rem] font-semibold capitalize;
+    }
+    .preview-box {
+      background: rgba(0 0 0 /0.3);
+      @apply w-full flex flex-col justify-start items-start overflow-hidden p-2 gap-2 rounded-lg;
+      .preview-bg {
+        @apply min-w-full min-h-[150px] drop-shadow-2xl rounded-lg;
+      }
+      .setting-context {
+        @apply w-full flex items-start justify-start gap-1 flex-col;
+        span {
+          @apply w-full text-[1rem] font-semibold capitalize;
+        }
+        p {
+          @apply w-full text-[.8rem] font-light;
+        }
+        button {
+          @apply w-full h-fit px-2 py-1 rounded-lg text-[.8rem] border-[1px] border-transparent capitalize hover:border-white transition-all;
+        }
+      }
+    }
+    .theme-btns {
+      @apply w-full h-fit flex flex-wrap items-start justify-start gap-3;
+      button {
+        @apply border-[1px] border-white min-w-[30px] min-h-[30px] rounded-full;
+      }
+    }
+  }
+}
+* {
+  box-sizing: border-box;
+  @apply transition-all outline-none m-0 p-0;
+}

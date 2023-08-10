@@ -1,0 +1,95 @@
+/* 
+.JDatePicker {
+    width: 300px;
+    height: fit-content;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .calendar-title {
+    text-align: center;
+    margin: 24px auto;
+    margin-top: 8px !important;
+    border-bottom: 2px solid #f7f7f7;
+    padding-bottom: 8px;
+  }
+  
+  .calendar-main {
+    display: flex;
+    justify-content: space-around;
+    max-height: 210px;
+    flex-direction: row-reverse;
+  }
+  
+  .calendar-main .selector {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    min-width: 82px;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .calendar-main ul {
+    background: #f7f7f7;
+    border-radius: 24px;
+    margin-top: 24px;
+    list-style: none;
+    overflow: scroll;
+    max-height: 100px;
+    scrollbar-width: none;
+  }
+  .calendar-main ul::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .calendar-main ul li {
+    margin: 38px auto;
+    font-weight: 800;
+    font-size: 16px;
+  }
+  
+  .calendar-main li.active {
+    color: #40b1d1 !important;
+  }
+  
+  .calendar-lines-modal-actions {
+    width: calc(100% - 8px);
+    margin: 16px auto;
+    bottom: 0;
+    left: 8px;
+    bottom: 8px;
+    background: #051115;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    z-index: 999999;
+  }
+  
+  .calendar-lines-modal-actions > button {
+    border: none;
+    background-color: transparent !important;
+  }
+  
+  .calendar-lines-modal-actions > button:nth-child(1) {
+    background-color: #0a2229 !important;
+    border: 1px solid #40b1d1;
+    color: #40b1d1 !important;
+  }
+  
+  .calendar-lines-modal-actions > button:nth-child(1):focus {
+    color: #40b1d1 !important;
+  }
+  
+  .calendar-lines-modal-actions > button:nth-child(1) > span {
+    margin-right: 8px;
+  }
+  
+  .calendar-lines-modal-actions > button:nth-child(2) {
+    border: 1px solid #cfcfcf;
+    width: 35% !important;
+    margin-right: 16px;
+  }
+   */

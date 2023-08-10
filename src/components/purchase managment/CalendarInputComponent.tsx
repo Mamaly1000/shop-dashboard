@@ -15,7 +15,6 @@ import { selectLanguage } from "../../features/languages/language_slice";
 import { isHidden } from "./THcomponent";
 import { useContextFunction } from "../../context/ContextProvider";
 import { IsSearchSelected } from "./Searchtr";
-import jmoment from "moment-jalaali";
 import moment from "moment-jalaali";
 const CalendarInputComponent = ({
   className,

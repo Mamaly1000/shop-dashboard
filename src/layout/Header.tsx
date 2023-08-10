@@ -25,7 +25,6 @@ import {
 } from "../features/header/header_slice";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import useTheme from "../hooks/useTheme";
 const Header = () => {
   const languageSelector = useSelector(selectLanguage);
   const headerSelector = useSelector(selectHeader);

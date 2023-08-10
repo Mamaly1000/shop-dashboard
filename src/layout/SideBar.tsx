@@ -76,7 +76,7 @@ const SideBar = () => {
     <AnimatePresence>
       {headerSelector.displaySideBar && (
         <motion.div
-          variants={sidebar_motion(0.5, undefined, 0.01, languageSelector)}
+          variants={sidebar_motion(0.5, 0.01, languageSelector.currentLanguage)}
           initial="hidden"
           animate="visible"
           exit="exit"

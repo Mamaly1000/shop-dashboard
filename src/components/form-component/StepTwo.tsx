@@ -12,9 +12,7 @@ import { useTranslation } from "react-i18next";
 import TextInputComponent from "./TextInputComponent";
 import { categoryIcon, dateIcon } from "../../assets/icons/icons";
 import DateInputComponent from "./DateInputComponent";
-import FormatHelper from "../../utils/formatHelper";
 import { toast } from "react-toastify";
-import moment from "moment";
 import { dateValidation } from "../../utils/dateValidation";
 import { motion } from "framer-motion";
 import { box_motions } from "../../motions/createProductsMotion";
@@ -93,18 +91,6 @@ const StepTwo = ({
           title: t("create_procuct_form.category.fa").toUpperCase(),
         })
       );
-    } else if (
-      !(
-        selectedProduct.addedDate.length > 0 &&
-        selectedProduct.expireDate.length > 0 &&
-        dateValidation(
-          selectedProduct.addedDate,
-          selectedProduct.expireDate,
-          lang
-        )
-      )
-    ) {
-      toast.error(t("form_toasts.date"));
     } else {
       setStep(3);
       dispatch(AddNewProduct(stepOneData));
@@ -138,7 +124,7 @@ const StepTwo = ({
       <DateInputComponent
         icon={dateIcon}
         label={t("create_procuct_form.date")}
-        onchange={(e: any, formatted: any) => {
+        onchange={(_e: any, formatted: any) => {
           setStepOneData({
             ...stepOneData,
             addedDate: formatted,
@@ -164,7 +150,7 @@ const StepTwo = ({
       <DateInputComponent
         icon={dateIcon}
         label={t("create_procuct_form.ex_date")}
-        onchange={(e: any, formatted: any) => {
+        onchange={(_e: any, formatted: any) => {
           setStepOneData({ ...stepOneData, expireDate: formatted });
         }}
         value={stepOneData.expireDate + ""}

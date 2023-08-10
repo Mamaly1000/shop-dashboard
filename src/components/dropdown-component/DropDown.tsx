@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectHeader } from "../../features/header/header_slice";
 import { useState } from "react";
 import {
-  filterProducts,
   filtersType,
   selectProducts,
   setRemoveSelectedFilter,
@@ -37,7 +36,6 @@ export const IsSelected = (
 };
 const DropDown = ({
   show,
-  setShow,
 }: {
   show: boolean;
   setShow: React.Dispatch<React.SetStateAction<boolean>>;

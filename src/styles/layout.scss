@@ -142,7 +142,7 @@
     @apply w-full min-h-[500px] max-h-fit py-0 px-5 md:px-24 transition-all;
   }
   .children-padding {
-    @apply ps-24 md:ps-[330px] pe-24;
+    @apply ps-5 md:ps-[330px] pe-5 md:pe-24;
   }
   .setting-container {
     background: rgba(255 255 255 /0.1);

@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductForm from "../components/form-component/ProductForm";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { small_box_motion } from "../motions/dashboardMotions";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectHeader } from "../features/header/header_slice";
 import ProgressComponent from "../components/form-component/ProgressComponent";
+import {
+  fakeProductInterface,
+  useContextFunction,
+} from "../context/ContextProvider";
+import { setEditProduct } from "../features/products/products_slice";
 
 const CreateProduct = () => {
   const nav = useNavigate();
@@ -14,7 +19,50 @@ const CreateProduct = () => {
   const { currentTheme } = useSelector(selectHeader);
   const { t } = useTranslation();
   const [step, setStep] = useState<number>(1);
-
+  const param = useParams();
+  const contextData = useContextFunction();
+  const dispatch = useDispatch();
+  const checkParam = (
+    param: string
+  ): {
+    value: boolean;
+    obj: fakeProductInterface;
+  } => {
+    const check = contextData!.fakeProducts.findIndex((p) => p.id === +param);
+    if (check < 0) {
+      return {
+        value: false,
+        obj: {
+          addedDate: "",
+          buyer: "",
+          category: {
+            en: "",
+            fa: "",
+          },
+          company: "",
+          description: "",
+          expireDate: "",
+          id: 0,
+          isActive: false,
+          name: "",
+          persiandesc: "",
+          persianName: "",
+          price: 0,
+          totalSupply: 0,
+        },
+      };
+    } else {
+      return {
+        value: true,
+        obj: contextData!.fakeProducts[check],
+      };
+    }
+  };
+  useEffect(() => {
+    if (checkParam(param.id as string).value) {
+      dispatch(setEditProduct(checkParam(param.id as string).obj));
+    }
+  }, []);
   return (
     <div className="create-product-page">
       <motion.h1

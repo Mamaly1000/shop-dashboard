@@ -1,16 +1,9 @@
-import {
-  createContext,
-  useState,
-  useMemo,
-  useLayoutEffect,
-  useEffect,
-} from "react";
+import { createContext, useState, useLayoutEffect, useEffect } from "react";
 import * as React from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   fetchProducts,
-  selectProducts,
   setProductsPagination,
 } from "../features/products/products_slice";
 import usePagination, {
@@ -46,7 +39,6 @@ const DashboardAppContextComponent = ({
   children: React.ReactNode;
 }) => {
   const dispatch = useDispatch();
-  const productsSelector = useSelector(selectProducts);
   const { Local_products_Table_Pagination, setLocalProductsTablePagination } =
     usePagination();
   const [fakeProducts, setFakeProducts] = useLocalStorage<
@@ -74,7 +66,7 @@ const DashboardAppContextComponent = ({
       fa: "تکنولوژی",
     },
   ]);
-  const fetchFakeData = useMemo(() => {
+  useEffect(() => {
     if (fakeProducts.length === 0) {
       const products: fakeProductInterface[] = [];
       for (let i = 0; i < 50; i++) {
@@ -125,7 +117,7 @@ const DashboardAppContextComponent = ({
       setProductsPagination({
         currentPage: Local_products_Table_Pagination.currentPage,
         offset: Local_products_Table_Pagination.offset,
-        totalPages: Local_products_Table_Pagination.totalPages,
+        totalPages: Math.ceil(fakeProducts.length / 10),
       } as productsTablePaginationType)
     );
   }, [Local_products_Table_Pagination]);

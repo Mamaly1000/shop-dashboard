@@ -10,7 +10,6 @@ import jmoment from "moment-jalaali";
 import FormatHelper from "../../utils/formatHelper";
 import { small_box_motion } from "../../motions/dashboardMotions";
 import { motion } from "framer-motion";
-import { ThemeColors } from "../../dummy/themecolors";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "../../features/languages/language_slice";
 import { useTranslation } from "react-i18next";
@@ -133,10 +132,6 @@ const Monitoring = () => {
             xaxis: {
               categories: eth_chart_data.total_volumes.map((coin) => {
                 let date = new Date(coin[0]);
-                let time =
-                  date.getHours() > 12
-                    ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                    : `${date.getHours()}:${date.getMinutes()} AM`;
                 return moment(date).format("YYYY/MM/DD");
               }),
               type: "datetime",
@@ -154,7 +149,7 @@ const Monitoring = () => {
                 },
               },
               x: {
-                formatter: (val: number, opts: any) => {
+                formatter: (val: number, _opts: any) => {
                   return languageSelector.currentLanguage === "en"
                     ? moment(val).format("YYYY-MMMM-DD")
                     : FormatHelper.toPersianString(
@@ -252,10 +247,6 @@ const Monitoring = () => {
             xaxis: {
               categories: dogecoin.total_volumes.map((coin) => {
                 let date = new Date(coin[0]);
-                let time =
-                  date.getHours() > 12
-                    ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                    : `${date.getHours()}:${date.getMinutes()} AM`;
                 return moment(date).format("YYYY/MM/DD");
               }),
               type: "datetime",
@@ -273,7 +264,7 @@ const Monitoring = () => {
                 },
               },
               x: {
-                formatter: (val: number, opts: any) => {
+                formatter: (val: number, _opts: any) => {
                   return languageSelector.currentLanguage === "en"
                     ? moment(val).format("YYYY-MMMM-DD")
                     : FormatHelper.toPersianString(
@@ -371,10 +362,6 @@ const Monitoring = () => {
             xaxis: {
               categories: btc_chart_data.prices.slice(0, 100).map((coin) => {
                 let date = new Date(coin[0]);
-                let time =
-                  date.getHours() > 12
-                    ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                    : `${date.getHours()}:${date.getMinutes()} AM`;
                 return moment(date).format("YYYY/MM/DD");
               }),
               type: "datetime",
@@ -392,7 +379,7 @@ const Monitoring = () => {
                 },
               },
               x: {
-                formatter: (val: number, opts: any) => {
+                formatter: (val: number, _opts: any) => {
                   return languageSelector.currentLanguage === "en"
                     ? moment(val).format("YYYY-MMMM-DD")
                     : FormatHelper.toPersianString(
@@ -512,10 +499,6 @@ const Monitoring = () => {
             xaxis: {
               categories: solana_chart_data.prices.map((coin) => {
                 let date = new Date(coin[0]);
-                let time =
-                  date.getHours() > 12
-                    ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                    : `${date.getHours()}:${date.getMinutes()} AM`;
                 return moment(date).format("YYYY/MM/DD");
               }),
               type: "datetime",
@@ -553,7 +536,7 @@ const Monitoring = () => {
                 },
               },
               x: {
-                formatter: (val: number, opts: any) => {
+                formatter: (val: number, _opts: any) => {
                   return languageSelector.currentLanguage === "en"
                     ? moment(val).format("YYYY-MMMM-DD")
                     : FormatHelper.toPersianString(

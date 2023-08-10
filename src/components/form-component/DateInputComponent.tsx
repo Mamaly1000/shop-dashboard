@@ -1,4 +1,3 @@
-import React from "react";
 import { DatePicker } from "react-advance-jalaali-datepicker";
 import { useSelector } from "react-redux";
 import { selectLanguage } from "../../features/languages/language_slice";

@@ -13,7 +13,6 @@ import { fakeProductInterface } from "../../context/ContextProvider";
 const TableComponent = ({ data }: { data: fakeProductInterface[] }) => {
   const { t } = useTranslation();
   const {
-    products,
     pagination: { offset },
   } = useSelector(selectProducts);
   const { currentTheme } = useSelector(selectHeader);

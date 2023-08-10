@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import { AnimatePresence, motion } from "framer-motion";
 import { small_box_motion } from "../../motions/dashboardMotions";
 import {
-  filterProducts,
   filtersType,
   resetProductsFilters,
   selectProducts,

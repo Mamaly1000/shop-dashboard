@@ -1,13 +1,10 @@
-import { useSelector } from "react-redux";
 import { ThemeColors } from "../../dummy/themecolors";
 import useTheme from "../../hooks/useTheme";
 import { motion } from "framer-motion";
-import { selectLanguage } from "../../features/languages/language_slice";
 import { useTranslation } from "react-i18next";
 
 const Setting = () => {
   const { setLocalCurrentTheme, currentTheme } = useTheme();
-  const languageSelector = useSelector(selectLanguage);
   const { t } = useTranslation();
 
   return (

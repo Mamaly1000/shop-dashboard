@@ -1,22 +1,19 @@
-import { languageType } from "../features/languages/language_slice";
-
 type motionEntriesType = number | undefined;
 export const sidebar_motion = (
   duration: motionEntriesType,
-  index: motionEntriesType,
   delay: motionEntriesType,
-  language: languageType
+  language: string
 ) => {
   return {
     hidden: {
-      x: language.currentLanguage === "fa" ? "100vw" : "-100vw",
+      x: language === "fa" ? "100vw" : "-100vw",
       opacity: 0,
     },
     visible: {
       opacity: 1,
       x: 0,
-      left: language.currentLanguage === "en" ? 0 : "unset",
-      right: language.currentLanguage === "fa" ? 0 : "unset",
+      left: language === "en" ? 0 : "unset",
+      right: language === "fa" ? 0 : "unset",
       transition: {
         duration: duration,
         delay: delay,
@@ -35,7 +32,7 @@ export const sidebar_motion = (
     },
     hover: {},
     exit: {
-      x: language.currentLanguage === "fa" ? "100vw" : "-100vw",
+      x: language === "fa" ? "100vw" : "-100vw",
       opacity: 0,
       transition: {
         duration: duration,

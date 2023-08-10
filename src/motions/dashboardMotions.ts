@@ -1,5 +1,3 @@
-import { languageType } from "../features/languages/language_slice";
-
 type motionEntriesType = number | undefined;
 
 export const small_box_motion = (

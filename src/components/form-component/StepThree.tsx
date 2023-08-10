@@ -7,7 +7,6 @@ import {
   AddNewProduct,
   selectProducts,
 } from "../../features/products/products_slice";
-import { selectLanguage } from "../../features/languages/language_slice";
 import { thirdStep } from "./ProductForm";
 import TextInputComponent from "./TextInputComponent";
 import { aquareIcon, descIcon, priceIcon } from "../../assets/icons/icons";
@@ -26,9 +25,8 @@ const StepThree = ({
 }) => {
   const dispatch = useDispatch();
   const { currentTheme } = useSelector(selectHeader);
-  const { currentLanguage: lang } = useSelector(selectLanguage);
   const { selectedProduct, products } = useSelector(selectProducts);
-  const [isActive, setIsActive] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<boolean>(selectedProduct.isActive);
   const [stepOneData, setStepOneData] = useState<thirdStep>({
     type: "THIRD",
     description:
@@ -58,11 +56,7 @@ const StepThree = ({
     console.log(stepOneData);
   }, [selectedProduct, products, step]);
   useEffect(() => {
-    if (selectedProduct.isActive) {
-      setStepOneData({ ...stepOneData, isActive: true });
-    } else {
-      setStepOneData({ ...stepOneData, isActive: isActive });
-    }
+    setStepOneData({ ...stepOneData, isActive: isActive });
   }, [isActive]);
   const stepValidation = () => {
     if (+FormatHelper.toEnglishString(stepOneData.price + "") === 0) {
@@ -154,7 +148,7 @@ const StepThree = ({
         {t("create_procuct_form.active")}
         <span className="circle-component">
           <AnimatePresence>
-            {!!stepOneData.isActive && (
+            {!!isActive && (
               <motion.span
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}

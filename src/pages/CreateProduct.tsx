@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProductForm from "../components/form-component/ProductForm";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import ProgressComponent from "../components/form-component/ProgressComponent";
 
 const CreateProduct = () => {
   const nav = useNavigate();
-  const [displayContent, setDisplayContent] = useState(false);
+  const [_displayContent, setDisplayContent] = useState(false);
   const { currentTheme } = useSelector(selectHeader);
   const { t } = useTranslation();
   const [step, setStep] = useState<number>(1);

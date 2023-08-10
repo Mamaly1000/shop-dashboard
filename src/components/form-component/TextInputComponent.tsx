@@ -1,8 +1,5 @@
 import React from "react";
-import { filtersType } from "../../features/products/products_slice";
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectHeader } from "../../features/header/header_slice";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
 

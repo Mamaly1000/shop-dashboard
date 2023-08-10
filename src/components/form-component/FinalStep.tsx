@@ -14,8 +14,7 @@ import { useContextFunction } from "../../context/ContextProvider";
 import { useNavigate } from "react-router-dom";
 import usePagination from "../../hooks/usePagination";
 
-const FinalStep = ({
-  step,
+const FinalStep = ({ 
   setStep,
 }: {
   step: number;

@@ -21,7 +21,7 @@ const TableRow = ({ product }: { product: fakeProductInterface }) => {
     <tr
       onClick={() => {
         dispatch(setEditProduct(product));
-        nav("/edit-product");
+        nav(`/edit-product/${product.id}`);
       }}
     >
       <td

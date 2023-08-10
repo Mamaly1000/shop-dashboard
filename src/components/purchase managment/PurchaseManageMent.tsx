@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectHeader } from "../../features/header/header_slice";
-import { selectLanguage } from "../../features/languages/language_slice";
 import { small_box_motion } from "../../motions/dashboardMotions";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import ProductsTable from "./ProductsTable";
-import { useContextFunction } from "../../context/ContextProvider";
+import { setEditProduct } from "../../features/products/products_slice";
+import { fakeProductInterface } from "../../context/ContextProvider";
 
 const PurchaseManageMent = () => {
   const headerSelector = useSelector(selectHeader);
-  const languageSelector = useSelector(selectLanguage);
-  const contextData = useContextFunction();
   const nav = useNavigate();
   const { t } = useTranslation();
   const [displayContent, setDisplayContent] = useState<boolean>(false);
+  const dispatch = useDispatch();
   return (
     <motion.div className="purchase-container">
       <motion.h1
@@ -34,7 +33,29 @@ const PurchaseManageMent = () => {
             background: headerSelector.currentTheme.btnColor,
             color: headerSelector.currentTheme.plainTextColor,
           }}
-          onClick={() => nav("/add-product")}
+          onClick={() => {
+            dispatch(
+              setEditProduct({
+                addedDate: "",
+                buyer: "",
+                category: {
+                  en: "",
+                  fa: "",
+                },
+                company: "",
+                description: "",
+                expireDate: "",
+                id: 0,
+                isActive: false,
+                name: "",
+                persiandesc: "",
+                persianName: "",
+                price: 0,
+                totalSupply: 0,
+              } as fakeProductInterface)
+            );
+            nav("/add-product");
+          }}
         >
           {t("purchasing.addbtn")}
         </button>

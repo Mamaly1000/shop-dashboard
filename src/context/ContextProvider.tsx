@@ -66,7 +66,7 @@ const DashboardAppContextComponent = ({
       fa: "تکنولوژی",
     },
   ]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (fakeProducts.length === 0) {
       const products: fakeProductInterface[] = [];
       for (let i = 0; i < 50; i++) {

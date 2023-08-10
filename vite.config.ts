@@ -12,7 +12,7 @@ export default defineConfig({
       },
     },
   },
-  base: "/dashboard",
+  base: "/",
   build: {
     outDir: "dist",
   },

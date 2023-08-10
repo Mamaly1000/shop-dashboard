@@ -21,12 +21,12 @@ function App() {
       <ScrollToTop />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.key}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/add-product" element={<CreateProduct />} />
           <Route path="/edit-product/:id" element={<EditProduct />} />
-          <Route path="/dashboard*" element={<Navigate to="/dashboard" />} />
-          <Route path="/*" element={<Navigate to="/dashboard" />} />
-          <Route path="*" element={<Navigate to="/dashboard" />} />
+          <Route path="/dashboard*" element={<Navigate to="/" />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </AnimatePresence>
       <ToastContainer

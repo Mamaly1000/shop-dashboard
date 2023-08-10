@@ -56,5 +56,6 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-sass": "^0.1.0"
-  }
+  },
+  "homepage": "https://master--deluxe-tapioca-d74669.netlify.app/dashboard"
 }

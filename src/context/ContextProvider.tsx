@@ -102,7 +102,7 @@ const DashboardAppContextComponent = ({
       setFakeProducts(products);
     }
   }, []);
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (fakeProducts.length > 0) {
       dispatch(fetchProducts(fakeProducts));
       setLocalProductsTablePagination({
@@ -111,7 +111,7 @@ const DashboardAppContextComponent = ({
         totalPages: Math.ceil(fakeProducts.length / 10),
       });
     }
-  }, []);
+  }, [fakeProducts]);
   useEffect(() => {
     dispatch(
       setProductsPagination({

@@ -7,7 +7,7 @@
     @apply w-[350px] h-[200px] rounded-lg drop-shadow-2xl p-1 flex items-center justify-center transition-all;
   }
   .progress-container {
-    @apply w-[300px] h-[300px] flex items-center justify-center relative;
+    @apply w-[250px] md:w-[300px] h-[250px] md:h-[300px] flex items-center justify-center relative;
     span {
       @apply z-20 whitespace-nowrap absolute w-fit h-fit flex items-center justify-center gap-3 rounded-lg px-5 py-2 text-[1.2rem] drop-shadow-2xl;
       img {
@@ -27,7 +27,7 @@
       @apply top-0;
     }
     .progress-slider {
-      @apply z-10 w-[300px] h-[300px] rotate-[-90deg] absolute;
+      @apply z-10 w-[250px] md:w-[300px] h-[250px] md:h-[300px] rotate-[-90deg] absolute;
     }
   }
   .input-group {
@@ -119,13 +119,13 @@
       .value {
         @apply font-bold;
         .circle {
-          @apply  min-w-[25px] opacity-80 min-h-[25px] rounded-full;
+          @apply min-w-[25px] opacity-80 min-h-[25px] rounded-full;
         }
         .red {
-          @apply bg-red-500  ;
+          @apply bg-red-500;
         }
         .green {
-          @apply bg-green-500 ;
+          @apply bg-green-500;
         }
       }
     }

@@ -130,7 +130,7 @@ const Header = () => {
           className="right_section"
           style={{ color: headerSelector.currentTheme.headerColor }}
         >
-          {window.location.pathname === "/dashboard" && (
+          {window.location.pathname === "/" && (
             <button
               onClick={() => {
                 dispatch(

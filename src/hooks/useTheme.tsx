@@ -14,11 +14,11 @@ const useTheme = () => {
     plainTextColor: string;
     darkColor: string;
   }>("theme", {
-    bgColor: "linear-gradient(to right, #6441a5, #2a0845)",
-    btnColor: "#6528F7",
-    headerColor: "#FFBDF7",
-    plainTextColor: "#FFECEC",
-    darkColor: "#3A1078",
+    bgColor: "linear-gradient(to right, #536976, #292e49)",
+    btnColor: "#435B66",
+    headerColor: "#FCECDD",
+    plainTextColor: "#F7F6E7",
+    darkColor: "#2C2E43",
   });
   const dispatch = useDispatch();
   useEffect(() => {

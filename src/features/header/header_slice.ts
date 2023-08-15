@@ -30,11 +30,11 @@ const initialState: initType = {
   displaySideBar: false,
   displayDashboardSection: "Purchase management",
   currentTheme: {
-    bgColor: "linear-gradient(to right, #6441a5, #2a0845)",
-    btnColor: "#79018C",
-    headerColor: "#FFBDF7",
-    plainTextColor: "#FFECEC",
-    darkColor: "#371B58",
+    bgColor: "linear-gradient(to right, #536976, #292e49)",
+    btnColor: "#435B66",
+    headerColor: "#FCECDD",
+    plainTextColor: "#F7F6E7",
+    darkColor: "#2C2E43",
   },
 };
 const HeaderReducer = createSlice({

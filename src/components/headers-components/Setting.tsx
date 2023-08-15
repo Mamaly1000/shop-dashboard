@@ -1,12 +1,14 @@
+import { useDispatch } from "react-redux";
 import { ThemeColors } from "../../dummy/themecolors";
 import useTheme from "../../hooks/useTheme";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { setHeaderTab } from "../../features/header/header_slice";
 
 const Setting = () => {
   const { setLocalCurrentTheme, currentTheme } = useTheme();
   const { t } = useTranslation();
-
+  const dispatch = useDispatch();
   return (
     <motion.div
       initial={{
@@ -19,6 +21,9 @@ const Setting = () => {
       }}
       exit={{ y: -10, opacity: 0 }}
       className="setting-container"
+      onMouseLeave={() => {
+        dispatch(setHeaderTab(""));
+      }}
     >
       <span
         className="setting-title"

@@ -1,7 +1,7 @@
 {
   "dashboard_title": "مانیتورنگ سامانه ",
   "header": {
-    "search_placeholder": "جستوجو کنید ...",
+    "search_placeholder": "جستجو کنید ...",
     "system": "سامانه آلپاین",
     "setting": {
       "title": "پیش نمایش تم",
@@ -96,8 +96,8 @@
     "addbtn": "ثبت خرید جدید",
     "table": {
       "search": {
-        "title": "جستوجو",
-        "placeholder": "جستوجو کنید ..."
+        "title": "جستجو",
+        "placeholder": "جستجو کنید ..."
       },
       "refresh": "فیلترها ریست شدند !",
       "filter": {

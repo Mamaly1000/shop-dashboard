@@ -10,6 +10,7 @@ import {
   setEditProduct,
 } from "../../features/products/products_slice";
 import { useNavigate } from "react-router-dom";
+import { editIcon } from "../../assets/icons/icons";
 
 const TableRow = ({ product }: { product: fakeProductInterface }) => {
   const dispatch = useDispatch();
@@ -39,6 +40,15 @@ const TableRow = ({ product }: { product: fakeProductInterface }) => {
           (lang === "en"
             ? product.id
             : FormatHelper.toPersianString(String(product.id)))}
+        {!isHidden(
+          { name: product.name, type: "td_number" },
+          hiddenCols,
+          "boolean"
+        ) && (
+          <button className="edit-btn">
+            <img src={editIcon} />
+          </button>
+        )}
       </td>
       <td
         className={`td_name ${isHidden(

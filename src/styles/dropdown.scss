@@ -1,5 +1,5 @@
 .dropdown-container {
-  @apply absolute z-20 top-[50px] min-w-[270px] drop-shadow-2xl max-w-fit rounded-lg p-2 flex flex-col justify-start items-end gap-2 overflow-y-auto overflow-x-visible max-h-[400px];
+  @apply absolute z-20 top-[50px] min-w-[300px] drop-shadow-2xl max-w-fit rounded-lg p-2 flex flex-col justify-start items-end gap-2 overflow-y-auto overflow-x-visible max-h-[400px];
   .filter-items-container {
     @apply max-w-fit rounded-lg flex flex-col justify-normal items-start gap-1 p-1;
   }

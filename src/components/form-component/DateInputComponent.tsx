@@ -10,11 +10,13 @@ const DateInputComponent = ({
   onchange,
   icon,
   label,
+  index,
 }: {
   value: string;
   onchange: (e: any, formatted: any) => void;
   icon: string;
   label: string;
+  index: number;
 }) => {
   const { currentLanguage: lang } = useSelector(selectLanguage);
   const DatePickerInput = (props: any) => {
@@ -28,7 +30,7 @@ const DateInputComponent = ({
     }
   }, [value]);
   return (
-    <div className="input-group date-input">
+    <div className="input-group date-input" style={{ zIndex: index }}>
       <span className="label-container">
         <img src={icon} />
         <label htmlFor={label}>{label} :</label>

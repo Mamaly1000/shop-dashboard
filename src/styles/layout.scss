@@ -108,10 +108,7 @@
         .team-mate-list {
           @apply w-full flex flex-col items-start justify-start gap-2;
           button {
-            @apply w-full min-h-[60px] flex items-center justify-start gap-2 p-1 rounded-lg hover:drop-shadow-2xl transition-all;
-            &:hover {
-              background: rgba(255 255 255 /0.2);
-            }
+            @apply w-full min-h-[60px] flex items-center justify-start gap-2 p-1 rounded-lg transition-all;
             div {
               @apply w-fit h-full flex flex-col items-start justify-start gap-1;
               .team-mate-name {

@@ -130,6 +130,7 @@ const StepTwo = ({
             addedDate: formatted,
           });
         }}
+        index={20}
         value={stepOneData.addedDate + ""}
       />
       <TextInputComponent
@@ -154,6 +155,7 @@ const StepTwo = ({
           setStepOneData({ ...stepOneData, expireDate: formatted });
         }}
         value={stepOneData.expireDate + ""}
+        index={10}
       />
       <div className="steps-action-container">
         <button

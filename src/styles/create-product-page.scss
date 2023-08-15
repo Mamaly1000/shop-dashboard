@@ -1,5 +1,5 @@
 .create-product-page {
-  @apply w-full min-h-[500px] py-10 flex flex-col items-center justify-start gap-5;
+  @apply relative w-full min-h-[1100px] md:min-h-[850px] py-10 flex flex-col items-center justify-start gap-5;
   .box {
     @apply min-w-full min-h-[200px] max-h-fit p-2 rounded-lg drop-shadow-2xl transition-all flex flex-wrap gap-3 items-start justify-between;
   }
@@ -7,7 +7,7 @@
     @apply w-[350px] h-[200px] rounded-lg drop-shadow-2xl p-1 flex items-center justify-center transition-all;
   }
   .progress-container {
-    @apply w-[250px] md:w-[300px] h-[250px] md:h-[300px] flex items-center justify-center relative;
+    @apply z-0 w-[250px] md:w-[300px] h-[250px] md:h-[300px] flex items-center justify-center relative;
     span {
       @apply z-20 whitespace-nowrap absolute w-fit h-fit flex items-center justify-center gap-3 rounded-lg px-5 py-2 text-[1.2rem] drop-shadow-2xl;
       img {
@@ -32,7 +32,7 @@
   }
   .input-group {
     background: rgba(255 255 255/0.1);
-    @apply relative flex flex-col md:flex-row items-center justify-between gap-2 w-full md:w-[48%] min-h-fit p-2 max-h-fit backdrop-blur-md rounded-lg drop-shadow-2xl;
+    @apply relative z-0 flex flex-col md:flex-row items-center justify-between gap-2 w-full md:w-[48%] min-h-fit p-2 max-h-fit backdrop-blur-md rounded-lg drop-shadow-2xl;
     .label-container {
       @apply w-full md:w-fit flex items-center justify-start gap-2;
       img {
@@ -53,7 +53,7 @@
       @apply pt-2 px-5 shadow-sm shadow-blur w-[100%] md:w-[60%] h-[45px] rounded-lg backdrop-blur-lg border-[1px] border-transparent hover:border-white focus:border-white;
     }
     .calander {
-      background: rgba(0 0 0/0.5);
+      background: rgba(0 0 0/0.9);
       @apply z-[99944999] backdrop-blur-xl absolute md:top-[65px] end-[-.05%]   top-[100px] font-vazir text-white;
       .JC-days {
         @apply bg-transparent;
@@ -95,7 +95,7 @@
     }
   }
   .date-input {
-    @apply z-30;
+    @apply z-30 focus:z-50 hover:z-50;
   }
   .section-header {
     @apply w-full min-h-fit text-[2rem] font-semibold capitalize flex items-center justify-between;

@@ -51,6 +51,7 @@ const SideBar = () => {
   const languageSelector = useSelector(selectLanguage);
   const headerSelector = useSelector(selectHeader);
   const [displayContent, setDisplayContent] = useState<boolean>(false);
+  const [DisplayTeamMates, setDisplayTeamMates] = useState<boolean>(false);
   const EnglishsideBarSectionsBtns: { title: string; icon: string }[] = t(
     "sidebar.links",
     { returnObjects: true }
@@ -89,7 +90,7 @@ const SideBar = () => {
           {displayContent && (
             <div className="sidebar_scroll">
               <motion.div
-                variants={view_from_bottom(0.5, 1)}
+                variants={view_from_bottom(0.5, 0)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -108,9 +109,6 @@ const SideBar = () => {
                 </button>
               </motion.div>
               <motion.div
-                variants={view_from_bottom(0.5, 1.3)}
-                initial="hidden"
-                whileInView="visible"
                 viewport={{ once: true }}
                 className="sidebar-section-btns"
               >
@@ -203,11 +201,13 @@ const SideBar = () => {
                     })}
               </motion.div>
               <motion.div
-                variants={view_from_bottom(0.5, 1.6)}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 className="team-mate-container"
+                onAnimationComplete={() => {
+                  setDisplayTeamMates(true);
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.1, delay: 1, type: "tween" }}
               >
                 <div
                   className="team-mate-header"
@@ -216,32 +216,29 @@ const SideBar = () => {
                   <img src={contactsIcon} /> {t("sidebar.teamMates.title")}
                 </div>
                 <div className="team-mate-list">
-                  {myTeamMates.map((data, index) => {
-                    return (
-                      <motion.button
-                        variants={view_from_bottom(0.3, index / 2 + 0.1)}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        key={index}
-                        style={{
-                          background: headerSelector.currentTheme.btnColor,
-                        }}
-                      >
-                        <img src={avatarPics[index]} />
-                        <div
+                  {DisplayTeamMates &&
+                    myTeamMates.map((data, index) => {
+                      return (
+                        <button
+                          key={index}
                           style={{
-                            color: headerSelector.currentTheme.plainTextColor,
+                            background: headerSelector.currentTheme.btnColor,
                           }}
                         >
-                          <span className="team-mate-name">{data.name}</span>
-                          <span className="team-mate-desc">
-                            {data.desc.slice(0, 30)} ...
-                          </span>
-                        </div>
-                      </motion.button>
-                    );
-                  })}
+                          <img src={avatarPics[index]} />
+                          <div
+                            style={{
+                              color: headerSelector.currentTheme.plainTextColor,
+                            }}
+                          >
+                            <span className="team-mate-name">{data.name}</span>
+                            <span className="team-mate-desc">
+                              {data.desc.slice(0, 30)} ...
+                            </span>
+                          </div>
+                        </button>
+                      );
+                    })}
                 </div>
               </motion.div>
             </div>
